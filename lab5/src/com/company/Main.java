@@ -1,7 +1,6 @@
 package com.company;
 import java.util.Scanner;
 import java.util.Random;
-import java.*;
 
 
 
@@ -85,6 +84,34 @@ public class Main {
 
 
 
+    // zad3
+
+    public static String delete(String str, char c)
+    {
+
+
+        String nowy = new String();
+        StringBuffer temp = new StringBuffer();
+        int licznik = 0;
+
+        for(int i=0; i<str.length(); i++)
+        {
+
+            if((str.charAt(i) == c) && (licznik==0))
+            {
+                temp.append(str.charAt(i));
+                licznik ++;
+            }
+
+            if((str.charAt(i) != c) || ((str.charAt(i) == c) && (licznik==0))) temp.append(str.charAt(i));
+
+        }
+
+
+        nowy = temp.toString();
+        return nowy;
+    }
+
 
 
     public static void main(String[] args) {
@@ -114,13 +141,23 @@ public class Main {
 
 
 
+
+
         // zad2
 
-        System.out.println("podaj ilosc liczb: ");
-        int n = in.nextInt();
+//        System.out.println("podaj ilosc liczb: ");
+//        int n = in.nextInt();
+//
+//        randomowe(n);
 
-        randomowe(n);
 
+
+
+
+        // zad3
+
+//        System.out.println(delete("aleksandra", 'a'));
+//        System.out.println(delete("tak tak tak tak", 'a'));
 
     }
 }
